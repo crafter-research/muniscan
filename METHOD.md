@@ -97,6 +97,22 @@ all nineteen domains one by one.
 The regression test for it lives in `src/score.test.ts` as *"own systems outrank
 linking out, which was the bug that shipped first"*.
 
+## Completeness
+
+A run is checked before it is scored. `score` refuses a census that shrank more
+than 5% against the previous run, one where more than 5% of entities failed to
+answer, or an empty one.
+
+This exists because the first scheduled run measured 1,495 municipalities
+against the previous 1,794 and produced a diff claiming 386 closures in a single
+day. gob.pe had throttled the crawler. Since each axis is normalised against the
+best value in its own run, the short census also moved every surviving score, so
+the corruption was not confined to the missing rows.
+
+A partial run is not wrong data; it is absent data wearing the shape of data.
+The pipeline is resumable, so the right response is to rerun `scan` for the same
+date and let it continue. `--force` exists for a drop confirmed to be real.
+
 ## Runs
 
 Each run writes `data/YYYY-MM-DD/` and never touches an earlier one. Runs are

@@ -69,6 +69,16 @@ between runs may reflect a change at the source rather than a change at the
 municipality. This is why every diff names the systems that appeared or
 disappeared: so a reviewer can tell the two apart.
 
+## Incomplete runs
+
+A run that gob.pe throttles comes back short, and a short census does not only
+lose rows: every axis is normalised against the best value in its own run, so
+the surviving scores move too. `score` refuses such a run rather than publishing
+it, but a dataset published before that guard existed could carry it.
+
+Check the entity count of any run against its neighbours before comparing across
+dates.
+
 ## Comparability
 
 muniscan is not comparable to MDOI Chile, LOSI, EGDI, or DIGILOG. Those measure
