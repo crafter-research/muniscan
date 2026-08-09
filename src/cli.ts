@@ -6,11 +6,12 @@
  * measured that day.
  */
 
-import { mkdirSync, existsSync, readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { declaredTotal, sweepSearch, scrapeTree, merge, isMunicipality } from "./discover";
 import { enrichAll, readDone, type Enriched } from "./enrich";
 import { centralPlatforms, score, type Scored } from "./score";
 import { diff, formatDelta } from "./diff";
+import { checkCompleteness, explain } from "./completeness";
 
 const DATA = "data";
 
@@ -79,7 +80,21 @@ async function scan(date: string): Promise<void> {
   console.log(`done: ${dir}/enriched.jsonl`);
 }
 
-function buildIndex(date: string): void {
+/** Municipality count from the newest run before `date`, or null if this is the first. */
+function previousCount(date: string): number | null {
+  if (!existsSync(DATA)) return null;
+  const earlier = readdirSync(DATA)
+    .filter((name) => /^\d{4}-\d{2}-\d{2}$/.test(name) && name < date)
+    .sort();
+  const last = earlier.at(-1);
+  if (!last) return null;
+
+  const path = `${DATA}/${last}/index.json`;
+  if (!existsSync(path)) return null;
+  return JSON.parse(readFileSync(path, "utf8")).municipalidades?.length ?? null;
+}
+
+function buildIndex(date: string, force = false): void {
   const dir = runDir(date);
   const rows = readJsonl<Enriched>(`${dir}/enriched.jsonl`);
   if (rows.length === 0) throw new Error(`no enriched rows in ${dir}; run scan first`);
@@ -91,6 +106,18 @@ function buildIndex(date: string): void {
   const municipalities = answered.filter((row) =>
     isMunicipality({ slug: row.slug, nombre: row.nombre, poder: row.poder, fuente: row.fuente })
   );
+  const check = checkCompleteness(municipalities, previousCount(date), null);
+  if (!check.ok) {
+    console.error(`this run looks incomplete:\n${explain(check)}`);
+    if (!force) {
+      throw new Error(
+        "refusing to score an incomplete census. Rerun `scan` for the same date to resume, " +
+          "or pass --force if you have confirmed the drop is real."
+      );
+    }
+    console.error("scoring anyway because --force was passed");
+  }
+
   const scored = score(municipalities, central);
 
   writeJson(`${dir}/index.json`, {
@@ -133,7 +160,10 @@ switch (command) {
     await scan(args[0] ?? today());
     break;
   case "score":
-    buildIndex(args[0] ?? today());
+    buildIndex(
+      args.find((arg) => !arg.startsWith("--")) ?? today(),
+      args.includes("--force")
+    );
     break;
   case "diff":
     if (args.length < 2) throw new Error("usage: diff <before-date> <after-date>");
@@ -145,7 +175,7 @@ switch (command) {
         "muniscan",
         "",
         "  scan [date]            discover and enrich; resumable, safe to rerun",
-        "  score [date]           build the index from a scan",
+        "  score [date] [--force] build the index from a scan; refuses an incomplete census",
         "  diff <before> <after>  compare two runs",
       ].join("\n")
     );
