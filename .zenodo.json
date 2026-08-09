@@ -1,0 +1,25 @@
+{
+  "title": "muniscan: an automated index of declared digital surface in Peruvian municipalities",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Hugo, Railly",
+      "affiliation": "Crafter Research"
+    }
+  ],
+  "keywords": [
+    "digital government",
+    "open data",
+    "Peru",
+    "municipalities",
+    "web measurement"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.7717/peerj-cs.3049",
+      "relation": "references",
+      "scheme": "doi"
+    }
+  ]
+}

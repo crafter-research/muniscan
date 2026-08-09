@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "muniscan: an automated index of declared digital surface in Peruvian municipalities"
+type: dataset
+message: "If you use this dataset, please cite it as below."
+authors:
+  - given-names: Railly
+    family-names: Hugo
+    affiliation: Crafter Research
+license: MIT
+repository-code: "https://github.com/crafter-research/muniscan"
+keywords:
+  - digital government
+  - open data
+  - Peru
+  - municipalities
+  - web measurement

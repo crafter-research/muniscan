@@ -1,0 +1,52 @@
+name: monthly scan
+
+# A run takes over an hour because it is deliberately serial: gob.pe blocks the
+# whole domain on concurrency. Nothing here publishes on its own -- the job opens
+# a pull request carrying the delta, and a human reads it before it lands.
+
+on:
+  schedule:
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - run: bun install --frozen-lockfile
+
+      - name: Resolve dates
+        id: dates
+        run: |
+          echo "today=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+          echo "previous=$(ls data | grep -E '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' | sort | tail -1)" >> "$GITHUB_OUTPUT"
+
+      - name: Scan
+        run: bun run src/cli.ts scan "${{ steps.dates.outputs.today }}"
+
+      - name: Score
+        run: bun run src/cli.ts score "${{ steps.dates.outputs.today }}"
+
+      - name: Diff against previous run
+        if: steps.dates.outputs.previous != steps.dates.outputs.today
+        run: bun run src/cli.ts diff "${{ steps.dates.outputs.previous }}" "${{ steps.dates.outputs.today }}"
+
+      - name: Open pull request with the delta
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: "scan/${{ steps.dates.outputs.today }}"
+          title: "Scan ${{ steps.dates.outputs.today }}"
+          body-path: "data/${{ steps.dates.outputs.today }}/DELTA.md"
+          commit-message: "data: scan ${{ steps.dates.outputs.today }}"
+          add-paths: data
