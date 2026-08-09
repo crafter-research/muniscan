@@ -60,8 +60,10 @@ Chile, LOSI or EGDI, which measure content, services or national policy.
 
 ## License
 
-Code MIT. Data license pending: the terms under which gob.pe content may be
-redistributed have not been verified yet, and no dataset is published until they
-are.
+Code MIT. Data CC-BY 4.0.
+
+The legal basis is written up in [DATA-LICENSE.md](./DATA-LICENSE.md), including
+what we could not confirm: gob.pe declares no content licence anywhere, and no
+Peruvian precedent exists on republishing scraped state data.
 
 Built by [Crafter Research](https://github.com/crafter-research).

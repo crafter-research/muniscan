@@ -21,5 +21,7 @@
       "relation": "references",
       "scheme": "doi"
     }
-  ]
+  ],
+  "license": "cc-by-4.0",
+  "notes": "Data are facts (entity names, slugs, linked .gob.pe hosts) not subject to copyright under Peruvian DL 822 art. 9.d. See DATA-LICENSE.md."
 }
