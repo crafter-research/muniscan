@@ -3,6 +3,12 @@ name: monthly scan
 # A run takes over an hour because it is deliberately serial: gob.pe blocks the
 # whole domain on concurrency. Nothing here publishes on its own -- the job opens
 # a pull request carrying the delta, and a human reads it before it lands.
+#
+# The failure mode this guards against is silence. A scan that dies leaves no
+# pull request, and a month with no pull request looks exactly like a month
+# nobody got around to reviewing. So a failed run files an issue against this
+# repo: GitHub then emails the watchers, which does not depend on any machine of
+# ours staying alive.
 
 on:
   schedule:
@@ -12,6 +18,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
 
 jobs:
   scan:
@@ -33,7 +40,8 @@ jobs:
           echo "previous=$(ls data | grep -E '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' | sort | tail -1)" >> "$GITHUB_OUTPUT"
 
       - name: Scan
-        run: bun run src/cli.ts scan "${{ steps.dates.outputs.today }}"
+        id: scan
+        run: bun run src/cli.ts scan "${{ steps.dates.outputs.today }}" 2>&1 | tee scan.log
 
       - name: Score
         run: bun run src/cli.ts score "${{ steps.dates.outputs.today }}"
@@ -50,3 +58,55 @@ jobs:
           body-path: "data/${{ steps.dates.outputs.today }}/DELTA.md"
           commit-message: "data: scan ${{ steps.dates.outputs.today }}"
           add-paths: data
+
+      # A partial run is worth keeping: the pipeline is resumable, so the next
+      # attempt can start from whatever this one managed to fetch.
+      - name: Keep whatever was fetched before the failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: partial-${{ steps.dates.outputs.today }}
+          path: |
+            data/${{ steps.dates.outputs.today }}/
+            scan.log
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: File an issue so the failure is not silent
+        if: failure()
+        uses: actions/github-script@v7
+        env:
+          RUN_DATE: ${{ steps.dates.outputs.today }}
+        with:
+          script: |
+            const date = process.env.RUN_DATE;
+            const run = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const title = `Scan ${date} failed`;
+
+            // One issue per failing run, but never a duplicate for the same date:
+            // a monthly job that reopens the same complaint trains you to ignore it.
+            const existing = await github.rest.issues.listForRepo({
+              ...context.repo,
+              state: "open",
+              labels: "scan-failure",
+            });
+            if (existing.data.some((issue) => issue.title === title)) return;
+
+            await github.rest.issues.create({
+              ...context.repo,
+              title,
+              labels: ["scan-failure"],
+              body: [
+                `The scheduled scan for **${date}** did not finish, so no pull request was opened this month.`,
+                ``,
+                `[Run log](${run}) · partial output is attached to that run as \`partial-${date}\`.`,
+                ``,
+                `Worth checking first:`,
+                ``,
+                `- gob.pe answering HTTP 418. It blocks the whole domain on concurrency and clears after roughly fourteen minutes; the pipeline is serial on purpose.`,
+                `- The search backend moved. Discovery depends on \`busquedas.json?contenido[]=instituciones&sheet=N\` returning 25 results under \`data.attributes.results\`.`,
+                `- The run hit the 300 minute timeout. A full scan is over an hour at 0.7s per request, so a slow day can reach it.`,
+                ``,
+                `The pipeline is resumable: rerunning \`scan\` for the same date skips every entity already in \`enriched.jsonl\`.`,
+              ].join("\n"),
+            });
