@@ -7,12 +7,12 @@
 **An automated, census-wide index of the digital surface Peru's municipalities declare on gob.pe.**
 
 [![monthly scan](https://github.com/crafter-research/muniscan/actions/workflows/monthly-scan.yml/badge.svg)](https://github.com/crafter-research/muniscan/actions/workflows/monthly-scan.yml)
-[![municipalities](https://img.shields.io/badge/municipalities-1%2C794-1f6feb)](./data)
-[![coverage](https://img.shields.io/badge/census%20coverage-95.5%25-1f6feb)](./METHOD.md)
+[![municipalities](https://img.shields.io/badge/municipalities-1%2C871-1f6feb)](./data)
+[![coverage](https://img.shields.io/badge/entity%20coverage-94.3%25-1f6feb)](./METHOD.md)
 [![code MIT](https://img.shields.io/badge/code-MIT-000)](./LICENSE)
 [![data CC--BY--4.0](https://img.shields.io/badge/data-CC--BY--4.0-000)](./DATA-LICENSE.md)
 
-[Method](./METHOD.md) · [Limitations](./LIMITATIONS.md) · [Data licence](./DATA-LICENSE.md)
+[Explore](https://muniscan.crafter.ing) · [Method](./METHOD.md) · [Limitations](./LIMITATIONS.md) · [Data licence](./DATA-LICENSE.md)
 
 </div>
 
@@ -24,7 +24,7 @@ scores a single city per country, by hand. Peru's own digital-government office
 publishes aggregates ("94% have a digital mailroom") without breaking them down
 by entity, and measures declared compliance rather than observed surface.
 
-Nobody has measured all 1,794 municipalities automatically, repeatedly, and in a
+Nobody has measured 1,871 municipal digital surfaces automatically, repeatedly, and in a
 way anyone else can rerun. That is what this does.
 
 ## What it found

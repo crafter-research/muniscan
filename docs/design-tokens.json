@@ -1,0 +1,70 @@
+{
+	"colors": {
+		"background": {
+			"primary": "#F2EFE6",
+			"secondary": "#FAF8F2",
+			"tertiary": "#B9DCD7"
+		},
+		"accent": {
+			"primary": "#1D5F74",
+			"secondary": "#ED654D"
+		},
+		"text": {
+			"primary": "#102A43",
+			"secondary": "#40546A",
+			"muted": "#A83729"
+		}
+	},
+	"typography": {
+		"fontFamily": {
+			"display": "Arial, Helvetica, sans-serif",
+			"body": "Arial, Helvetica, sans-serif",
+			"mono": "ui-monospace, SFMono-Regular, Menlo, monospace"
+		},
+		"fontSize": {
+			"hero": "clamp(3.4rem, 7.1vw, 7.5rem)",
+			"h1": "clamp(3.4rem, 7.1vw, 7.5rem)",
+			"h2": "clamp(2.5rem, 5vw, 5.5rem)",
+			"body": "1rem",
+			"small": "0.82rem",
+			"micro": "0.68rem"
+		},
+		"fontWeight": {
+			"bold": 800,
+			"semibold": 600,
+			"regular": 400
+		},
+		"lineHeight": {
+			"tight": 0.93,
+			"normal": 1.55,
+			"relaxed": 1.6
+		}
+	},
+	"spacing": {
+		"section": "clamp(6rem, 12vw, 11rem)",
+		"element": "2rem",
+		"tight": "0.75rem"
+	},
+	"borderRadius": {
+		"card": "0",
+		"button": "0",
+		"pill": "0"
+	},
+	"shadow": {},
+	"animation": {
+		"duration": {
+			"fast": "150ms",
+			"normal": "300ms"
+		},
+		"easing": {
+			"default": "ease-out"
+		}
+	},
+	"effects": [
+		"operational-civic-atlas",
+		"mineral-paper-surface",
+		"hairline-evidence-rules",
+		"bounded-table-scroll",
+		"abstract-census-field"
+	]
+}

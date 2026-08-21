@@ -1,0 +1,222 @@
+---
+import diff from "../../../data/2026-08-21/diff.json";
+import sample from "../../../data/2026-08-21/health-sample.json";
+import snapshot from "../../../data/2026-08-21/index.json";
+import Layout from "../layouts/Layout.astro";
+
+const repo = "https://github.com/crafter-research/muniscan";
+const snapshotUrl = `${repo}/tree/main/data/2026-08-21`;
+const rawUrl = `${repo}/raw/main/data/2026-08-21`;
+const municipalities = snapshot.municipalidades.map((municipality) => ({
+	name: municipality.nombre,
+	slug: municipality.slug,
+	rank: municipality.ranking,
+	score: municipality.indice,
+	own: municipality.sistemas_propios,
+	central: municipality.plataformas_centrales,
+}));
+const initialRows = municipalities.slice(0, 12);
+const bands = [
+	{ label: "0", count: 30 },
+	{ label: "1–19", count: 285 },
+	{ label: "20–39", count: 928 },
+	{ label: "40–59", count: 588 },
+	{ label: "60+", count: 40 },
+];
+const movement = [...diff.movimientos].sort(
+	(a, b) => Math.abs(b.cambio) - Math.abs(a.cambio),
+);
+const ownShare = Math.round(
+	((snapshot.resumen.municipalidades - snapshot.resumen.con_sistema_propio) /
+		snapshot.resumen.municipalidades) *
+		100,
+);
+---
+
+<Layout
+  title="Muniscan · Atlas de la superficie digital municipal del Perú"
+  description="Censo abierto y reproducible de la superficie digital que las municipalidades del Perú declaran en gob.pe."
+>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Muniscan, inicio">
+      <span class="wordmark-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>muni<em>scan</em></span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="#explorar">Explorar</a>
+      <a href="#cambios">Cambios</a>
+      <a href="#metodo">Método</a>
+      <a href="https://crafter.ing/muniscan">Bitácora ↗</a>
+    </nav>
+    <a class="snapshot-pill" href={snapshotUrl}>Snapshot 2026.08.21 ↗</a>
+  </header>
+
+  <main id="contenido">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="kicker"><span>Atlas 02</span> Perú · 21 agosto 2026</p>
+        <h1>La superficie digital de <strong>1,871 municipalidades</strong>, abierta para inspección.</h1>
+        <p class="hero-summary">
+          Muniscan convierte los enlaces publicados en gob.pe en un censo recurrente de arquitectura técnica declarada. Cada cifra conserva su snapshot, método y límite.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#explorar">Buscar municipalidad</a>
+          <a class="button" href={`${rawUrl}/index.json`}>Descargar JSON ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-atlas" role="img" aria-label="Resumen visual del snapshot">
+        <div class="atlas-grid" aria-hidden="true">
+          {Array.from({ length: 48 }).map((_, index) => (
+            <span class:list={{ hot: [2, 9, 18, 29, 36, 45].includes(index) }}></span>
+          ))}
+        </div>
+        <div class="atlas-caption">
+          <span>Universo publicado</span>
+          <strong>94.3%</strong>
+          <small>3,474 de las 3,684 entidades declaradas por gob.pe fueron enriquecidas.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="metric-rail" aria-label="Métricas principales">
+      <article><span>01 / censo</span><strong>1,871</strong><p>municipalidades puntuadas</p></article>
+      <article class="metric-signal"><span>02 / hallazgo</span><strong>{ownShare}%</strong><p>sin sistemas propios clasificados</p></article>
+      <article><span>03 / centro</span><strong>34</strong><p>índice mediano del snapshot</p></article>
+      <article><span>04 / recurrencia</span><strong>02</strong><p>snapshots públicos comparables</p></article>
+    </section>
+
+    <section class="finding section-shell">
+      <div class="section-intro">
+        <p class="kicker"><span>Lectura 01</span> distribución</p>
+        <h2>La mayoría está en la franja media-baja del modelo.</h2>
+        <p>928 municipalidades se ubican entre 20 y 39. Solo 40 superan 60. Son bandas del modelo registrado, no categorías legales ni una definición universal de madurez digital.</p>
+      </div>
+      <div class="distribution" role="img" aria-label="Distribución de índice por bandas">
+        {bands.map((band) => (
+          <div class="distribution-row">
+            <span>{band.label}</span>
+            <div class="distribution-track"><i style={`--bar: ${(band.count / 928) * 100}%`}></i></div>
+            <strong>{band.count}</strong>
+          </div>
+        ))}
+        <div class="distribution-axis"><span>Índice 0</span><span>Índice 100</span></div>
+      </div>
+    </section>
+
+    <section id="explorar" class="explorer section-shell">
+      <div class="explorer-heading">
+        <div><p class="kicker"><span>Dataset</span> censo completo</p><h2>Encuentra una municipalidad.</h2></div>
+        <label class="search-field">
+          <span class="sr-only">Buscar por municipalidad o dominio</span>
+          <input id="municipality-search" name="q" type="search" placeholder="Ej. Huancayo, Barranco, casilla…" autocomplete="off" />
+          <kbd>⌘ K</kbd>
+        </label>
+      </div>
+
+      <div class="table-frame">
+        <div class="table-meta"><span id="result-count" aria-live="polite">Top 12 de 1,871</span><span>ordenado por índice · snapshot fijo</span></div>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>#</th><th>Municipalidad</th><th>Índice</th><th>Sistemas propios</th><th>Plataformas centrales</th></tr></thead>
+            <tbody id="municipality-rows">
+              {initialRows.map((municipality) => (
+                <tr>
+                  <td>{String(municipality.rank).padStart(2, "0")}</td>
+                  <td><a href={`https://www.gob.pe/${municipality.slug}`}>{municipality.name} ↗</a></td>
+                  <td><strong>{municipality.score}</strong></td><td>{municipality.own.length}</td><td>{municipality.central.length}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="boundary-note"><strong>Límite:</strong> “Sistema propio” es una clasificación conservadora por hostname. Reduce falsos positivos conocidos y admite falsos negativos. No demuestra propiedad ni calidad.</p>
+    </section>
+
+    <section id="cambios" class="change-section section-shell">
+      <div class="section-intro">
+        <p class="kicker"><span>Lectura 02</span> 08 → 21 agosto</p>
+        <h2>Una segunda observación, no una tendencia.</h2>
+        <p>La recurrencia ya fue ejecutada una vez con guardas de completitud. El diff registra qué cambió en la superficie observada, pero no explica por qué cambió.</p>
+      </div>
+      <div class="change-grid">
+        <div class="change-summary">
+          <div><span>Antes</span><strong>{diff.resumen.antes}</strong><small>08 ago</small></div><span class="change-arrow" aria-hidden="true">→</span><div><span>Ahora</span><strong>{diff.resumen.ahora}</strong><small>21 ago</small></div>
+          <dl>
+            <div><dt>Altas</dt><dd>+{diff.resumen.altas}</dd></div><div><dt>Bajas</dt><dd>−{diff.resumen.bajas}</dd></div>
+            <div><dt>Movimientos</dt><dd>{diff.resumen.subieron + diff.resumen.bajaron}</dd></div><div><dt>Sin cambio</dt><dd>{diff.resumen.sin_cambio}</dd></div>
+          </dl>
+        </div>
+        <div class="movement-list">
+          <div class="list-head"><span>Mayores movimientos registrados</span><span>antes → ahora</span></div>
+          {movement.slice(0, 6).map((item) => (
+            <article>
+              <div><strong>{item.nombre}</strong><small>{item.sistemas_nuevos.length ? `${item.sistemas_nuevos.length} sistemas nuevos clasificados` : "sin nuevos sistemas clasificados"}</small></div>
+              <span>{item.antes} → {item.ahora}</span><b class:list={{ down: item.cambio < 0 }}>{item.cambio > 0 ? "+" : ""}{item.cambio}</b>
+            </article>
+          ))}
+        </div>
+      </div>
+      <p class="boundary-note"><strong>No inferir causalidad:</strong> un movimiento puede venir de la página fuente, del directorio, de redirects o del modelo. No prueba mejora ni deterioro institucional.</p>
+    </section>
+
+    <section class="http-section section-shell">
+      <div class="http-score"><span>Observación HTTP acotada</span><strong>{sample.summary.http_2xx}<small>/100</small></strong><p>dominios devolvieron una respuesta 2xx en una solicitud puntual.</p></div>
+      <div class="http-copy">
+        <p class="kicker"><span>Muestra</span> 20 por quintil</p><h2>Cien requests, no un monitor de uptime.</h2>
+        <p>{sample.summary.reachable} hosts respondieron y {sample.summary.unreachable} no produjeron una respuesta HTTP. Cada dominio se consultó una vez, en serie, con timeout de 15 segundos.</p>
+        <a href={`${rawUrl}/health-sample.json`}>Abrir observaciones crudas ↗</a>
+      </div>
+    </section>
+
+    <section id="metodo" class="method-section section-shell">
+      <div class="method-title"><p class="kicker"><span>Protocolo</span> cómo se produce</p><h2>Cada cifra deja una ruta.</h2></div>
+      <ol class="method-steps">
+        <li><span>01</span><div><strong>Descubrir</strong><p>Unir vistas discordantes del directorio gob.pe y restaurar municipalidades conocidas del snapshot anterior.</p></div><code>entities.json</code></li>
+        <li><span>02</span><div><strong>Enriquecer</strong><p>Consultar cada página institucional en serie y registrar enlaces y señales visibles.</p></div><code>enriched.jsonl</code></li>
+        <li><span>03</span><div><strong>Controlar</strong><p>Rechazar censos vacíos, demasiado pequeños o con una tasa anómala de errores.</p></div><code>completeness.ts</code></li>
+        <li><span>04</span><div><strong>Puntuar</strong><p>Aplicar el modelo versionado de presencia, adopción central y autonomía por hostname.</p></div><code>index.json</code></li>
+        <li><span>05</span><div><strong>Comparar</strong><p>Crear un diff contra el snapshot puntuado anterior sin reescribir corridas publicadas.</p></div><code>diff.json</code></li>
+      </ol>
+      <div class="method-links"><a href={`${repo}/blob/main/METHOD.md`}>Leer método completo ↗</a><a href={`${repo}/blob/main/LIMITATIONS.md`}>Leer limitaciones ↗</a><a href={repo}>Inspeccionar código ↗</a></div>
+    </section>
+
+    <section class="citation section-shell">
+      <div><p class="kicker"><span>Al citar</span> usa el snapshot</p><h2>Datos fechados, no una afirmación flotante.</h2><p>Indica la fecha 2026-08-21 y enlaza la corrida exacta. Una anomalía es una pista para revisión manual, nunca una acusación ni una medición de cumplimiento legal.</p></div>
+      <div class="citation-actions"><a href={snapshotUrl}>Abrir snapshot exacto ↗</a><a href={`${repo}/issues/new`}>Reportar corrección ↗</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <a class="wordmark wordmark-small" href="#top"><span class="wordmark-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>muni<em>scan</em></span></a>
+    <p>Medición pública y open source por <a href="https://crafter.ing">Crafter Research ↗</a></p><span>Datos CC BY 4.0 · Código MIT</span>
+  </footer>
+
+  <script is:inline type="application/json" id="municipalities-data" set:html={JSON.stringify(municipalities)}></script>
+  <script>
+    const dataElement = document.querySelector<HTMLScriptElement>("#municipalities-data");
+    const input = document.querySelector<HTMLInputElement>("#municipality-search");
+    const rows = document.querySelector<HTMLTableSectionElement>("#municipality-rows");
+    const count = document.querySelector<HTMLElement>("#result-count");
+    const municipalities = JSON.parse(dataElement?.textContent ?? "[]") as Array<{ name: string; slug: string; rank: number; score: number; own: string[]; central: string[] }>;
+    const escapeHtml = (value: string) => value.replace(/[&<>'"]/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[character] ?? character);
+    const render = () => {
+      if (!input || !rows || !count) return;
+      const query = input.value.trim().toLocaleLowerCase("es");
+      const matches = query ? municipalities.filter((municipality) => `${municipality.name} ${municipality.slug} ${municipality.own.join(" ")}`.toLocaleLowerCase("es").includes(query)) : municipalities.slice(0, 12);
+      const visible = matches.slice(0, 50);
+      rows.innerHTML = visible.map((municipality) => `<tr><td>${String(municipality.rank).padStart(2, "0")}</td><td><a href="https://www.gob.pe/${escapeHtml(municipality.slug)}">${escapeHtml(municipality.name)} ↗</a></td><td><strong>${municipality.score}</strong></td><td>${municipality.own.length}</td><td>${municipality.central.length}</td></tr>`).join("");
+      count.textContent = query ? `${matches.length} resultados${matches.length > 50 ? " · mostrando 50" : ""}` : "Top 12 de 1,871";
+      const url = new URL(window.location.href);
+      if (query) url.searchParams.set("q", input.value.trim());
+      else url.searchParams.delete("q");
+      window.history.replaceState({}, "", url);
+    };
+    const initialQuery = new URL(window.location.href).searchParams.get("q");
+    if (input && initialQuery) { input.value = initialQuery; render(); }
+    input?.addEventListener("input", render);
+    document.addEventListener("keydown", (event) => { if ((event.metaKey || event.ctrlKey) && event.key.toLocaleLowerCase() === "k") { event.preventDefault(); input?.focus(); } });
+  </script>
+</Layout>
