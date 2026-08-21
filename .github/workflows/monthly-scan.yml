@@ -53,6 +53,11 @@ jobs:
       - name: Observe 100-site health sample
         run: bun run src/cli.ts health-sample "${{ steps.dates.outputs.today }}"
 
+      - name: Refresh the pull request base
+        run: |
+          git fetch origin main:refs/remotes/origin/main
+          git merge --ff-only origin/main
+
       - name: Open pull request with the delta
         uses: peter-evans/create-pull-request@v7
         with:
