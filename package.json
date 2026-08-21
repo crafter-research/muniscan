@@ -12,6 +12,7 @@
     "scan": "bun run src/cli.ts scan",
     "score": "bun run src/cli.ts score",
     "diff": "bun run src/cli.ts diff",
+    "health-sample": "bun run src/cli.ts health-sample",
     "test": "bun test",
     "typecheck": "tsc --noEmit"
   },

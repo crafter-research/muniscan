@@ -6,20 +6,21 @@
  * measured that day.
  */
 
-import { mkdirSync, existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { checkCompleteness, explain } from "./completeness";
+import { diff, formatDelta } from "./diff";
 import {
   declaredTotal,
-  sweepSearch,
-  scrapeTree,
+  isMunicipality,
   merge,
   restoreKnownMunicipalities,
-  isMunicipality,
+  scrapeTree,
+  sweepSearch,
 } from "./discover";
-import { enrichAll, readDone, type Enriched } from "./enrich";
-import { centralPlatforms, score, type Scored } from "./score";
-import { diff, formatDelta } from "./diff";
-import { checkCompleteness, explain } from "./completeness";
+import { type Enriched, enrichAll, readDone } from "./enrich";
 import { previousMunicipalities, previousMunicipalityCount } from "./history";
+import { type HealthObservation, observeSample, selectHealthSample } from "./sample";
+import { centralPlatforms, type Scored, score } from "./score";
 
 const DATA = "data";
 
@@ -154,6 +155,44 @@ function compare(beforeDate: string, afterDate: string): void {
   console.log(formatDelta(delta, afterDate));
 }
 
+async function healthSample(date: string): Promise<void> {
+  const indexPath = `${DATA}/${date}/index.json`;
+  if (!existsSync(indexPath)) throw new Error(`missing ${indexPath}; score the snapshot first`);
+
+  const index = JSON.parse(readFileSync(indexPath, "utf8")) as { municipalidades: Scored[] };
+  const targets = selectHealthSample(index.municipalidades);
+  const observations = await observeSample(targets, (done, total) => {
+    if (done % 10 === 0 || done === total) console.log(`  ${done}/${total}`);
+  });
+  const output = {
+    schema_version: "0.1.0",
+    snapshot: date,
+    generated_at: new Date().toISOString(),
+    method: "https://github.com/crafter-research/muniscan/blob/main/HEALTH-SAMPLE.md",
+    interpretation:
+      "One HTTP observation per domain classified by Muniscan as a municipal system. Reachability is not ownership, service quality, uptime, compliance, or historical availability.",
+    summary: {
+      sampled: observations.length,
+      reachable: observations.filter((row) => row.reachable).length,
+      unreachable: observations.filter((row) => !row.reachable).length,
+      http_2xx: observations.filter(
+        (row) => row.http_status !== null && row.http_status >= 200 && row.http_status < 300
+      ).length,
+    },
+    observations,
+  } satisfies {
+    schema_version: string;
+    snapshot: string;
+    generated_at: string;
+    method: string;
+    interpretation: string;
+    summary: Record<string, number>;
+    observations: HealthObservation[];
+  };
+  writeJson(`${DATA}/${date}/health-sample.json`, output);
+  console.log(`100-site HTTP observation -> ${DATA}/${date}/health-sample.json`);
+}
+
 const [command, ...args] = process.argv.slice(2);
 
 switch (command) {
@@ -167,8 +206,12 @@ switch (command) {
     );
     break;
   case "diff":
-    if (args.length < 2) throw new Error("usage: diff <before-date> <after-date>");
-    compare(args[0]!, args[1]!);
+    if (args[0] === undefined || args[1] === undefined)
+      throw new Error("usage: diff <before-date> <after-date>");
+    compare(args[0], args[1]);
+    break;
+  case "health-sample":
+    await healthSample(args[0] ?? today());
     break;
   default:
     console.log(
@@ -178,6 +221,7 @@ switch (command) {
         "  scan [date]            discover and enrich; resumable, safe to rerun",
         "  score [date] [--force] build the index from a scan; refuses an incomplete census",
         "  diff <before> <after>  compare two runs",
+        "  health-sample [date]   observe 100 classified domains from a scored snapshot",
       ].join("\n")
     );
 }

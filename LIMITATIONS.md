@@ -92,3 +92,16 @@ muniscan is not comparable to MDOI Chile, LOSI, EGDI, or DIGILOG. Those measure
 content, services, or national policy; muniscan measures declared technical
 architecture. Placing a muniscan score beside an MDOI score is an error. See the
 related work section of METHOD.md.
+
+## 100-site HTTP observations
+
+`health-sample.json` is a stratified sample of municipalities for which
+Muniscan classifies at least one linked domain as a municipal system. That
+hostname-based classification is not verified ownership. The sample excludes
+municipalities without such a classification and selects only one domain per
+included municipality.
+
+Each result is one request at one time. It is not uptime, service quality,
+accessibility, security or legal compliance. A failed request can be transient;
+a successful response can still lead to a broken or unusable service. See
+[`HEALTH-SAMPLE.md`](./HEALTH-SAMPLE.md) before interpreting the file.

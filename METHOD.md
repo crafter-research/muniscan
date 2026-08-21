@@ -134,12 +134,17 @@ data/YYYY-MM-DD/
   index.json       the scored municipalities
   diff.json        what changed since the previous run
   DELTA.md         the same diff, readable in a pull request
+  health-sample.json  one bounded HTTP observation for 100 classified domains
 ```
 
 `enriched.jsonl` is appended one row at a time. An earlier version held
 everything in memory and wrote once at the end; killing it after gob.pe blocked
 us threw away 1,600 already-fetched rows. Appending per row also makes a run
 resumable, so rerunning `scan` picks up where it stopped.
+
+The recurring 100-site observation is documented separately in
+[`HEALTH-SAMPLE.md`](./HEALTH-SAMPLE.md). It is attached to a scored snapshot
+and is never included in the municipality score.
 
 ## Related work
 

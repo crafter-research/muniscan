@@ -47,6 +47,7 @@ bun install
 bun run scan          # discover and enrich; resumable, safe to rerun
 bun run score         # build the index from a scan
 bun run diff <a> <b>  # compare two runs
+bun run health-sample # observe 100 classified domains from a scored snapshot
 bun test
 ```
 
@@ -66,6 +67,8 @@ is serial with a 0.7s pause on purpose. Do not add a worker pool.
   scoring bug that shipped in the first version
 - [LIMITATIONS.md](./LIMITATIONS.md) — what the index does not measure, and why a
   low score is not evidence of non-compliance
+- [HEALTH-SAMPLE.md](./HEALTH-SAMPLE.md): the recurring 100-site HTTP observation
+  and why it is not an uptime or service-quality measure
 
 muniscan measures declared technical architecture. It is not comparable to MDOI
 Chile, LOSI or EGDI, which measure content, services or national policy.
