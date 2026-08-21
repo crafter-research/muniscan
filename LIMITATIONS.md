@@ -69,6 +69,13 @@ between runs may reflect a change at the source rather than a change at the
 municipality. This is why every diff names the systems that appeared or
 disappeared: so a reviewer can tell the two apart.
 
+After the first published census, municipality discovery is stateful. A known
+municipality omitted by the nondeterministic search endpoint is carried forward
+from the newest earlier published index and fetched again. This prevents a
+short directory sweep from becoming a false closure, but it also means the
+published universe is no longer reconstructed from the current directory alone.
+A genuine removal appears first as a non-2xx row and requires review.
+
 ## Incomplete runs
 
 A run that gob.pe throttles comes back short, and a short census does not only
@@ -76,8 +83,8 @@ lose rows: every axis is normalised against the best value in its own run, so
 the surviving scores move too. `score` refuses such a run rather than publishing
 it, but a dataset published before that guard existed could carry it.
 
-Check the entity count of any run against its neighbours before comparing across
-dates.
+Check the entity count, restored-municipality count and non-2xx rows of any run
+against its neighbours before comparing across dates.
 
 ## Comparability
 

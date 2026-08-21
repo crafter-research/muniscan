@@ -25,6 +25,14 @@ returns duplicates and misses entities. muniscan oversamples instead, dedupes by
 slug, and stops after 40 consecutive sheets add nothing new. That saturated at
 sheet 185, yielding 3,520 of the 3,684 entities the backend declares (95.5%).
 
+Later runs showed that saturation itself is not reproducible: two complete
+GitHub Actions sweeps stopped growing after sheet 150 and found only 1,495 and
+1,441 municipalities. Current discovery is therefore unioned with the
+municipalities in the newest earlier published `index.json`. Every restored
+municipality is fetched again. Current discovery can add entities, while a
+known entity that now returns a non-2xx response remains an explicit error for
+review rather than disappearing silently.
+
 ## Enrichment
 
 One GET per entity. From the HTML we record:
@@ -100,8 +108,9 @@ linking out, which was the bug that shipped first"*.
 ## Completeness
 
 A run is checked before it is scored. `score` refuses a census that shrank more
-than 5% against the previous run, one where more than 5% of entities failed to
-answer, or an empty one.
+than 5% against the newest earlier published index, one where more than 5% of
+entities failed to answer, or an empty one. Failed run directories without an
+`index.json` are not baselines.
 
 This exists because the first scheduled run measured 1,495 municipalities
 against the previous 1,794 and produced a diff claiming 386 closures in a single
@@ -120,7 +129,7 @@ immutable so a published DOI keeps pointing at the numbers measured that day.
 
 ```
 data/YYYY-MM-DD/
-  entities.json    the census: what was discovered, and coverage against the declared total
+  entities.json    the census, including discovered and restored municipality counts
   enriched.jsonl   one row per entity, appended as fetched
   index.json       the scored municipalities
   diff.json        what changed since the previous run

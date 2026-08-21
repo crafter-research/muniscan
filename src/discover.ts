@@ -134,6 +134,25 @@ export function merge(
   return [...merged.values()].sort((a, b) => a.slug.localeCompare(b.slug));
 }
 
+export function restoreKnownMunicipalities(
+  discovered: Entity[],
+  previous: Entity[]
+): { entities: Entity[]; restored: number } {
+  const merged = new Map(discovered.map((entity) => [entity.slug, entity]));
+  let restored = 0;
+
+  for (const entity of previous) {
+    if (!isMunicipality(entity) || merged.has(entity.slug)) continue;
+    merged.set(entity.slug, entity);
+    restored++;
+  }
+
+  return {
+    entities: [...merged.values()].sort((a, b) => a.slug.localeCompare(b.slug)),
+    restored,
+  };
+}
+
 export function isMunicipality(entity: Entity): boolean {
   return entity.slug.startsWith("muni") || /municipalidad/i.test(entity.nombre);
 }
