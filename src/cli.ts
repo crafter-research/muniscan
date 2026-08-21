@@ -6,12 +6,20 @@
  * measured that day.
  */
 
-import { mkdirSync, existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
-import { declaredTotal, sweepSearch, scrapeTree, merge, isMunicipality } from "./discover";
+import { mkdirSync, existsSync, readFileSync, writeFileSync } from "node:fs";
+import {
+  declaredTotal,
+  sweepSearch,
+  scrapeTree,
+  merge,
+  restoreKnownMunicipalities,
+  isMunicipality,
+} from "./discover";
 import { enrichAll, readDone, type Enriched } from "./enrich";
 import { centralPlatforms, score, type Scored } from "./score";
 import { diff, formatDelta } from "./diff";
 import { checkCompleteness, explain } from "./completeness";
+import { previousMunicipalities, previousMunicipalityCount } from "./history";
 
 const DATA = "data";
 
@@ -56,17 +64,24 @@ async function scan(date: string): Promise<void> {
   console.log("reading branch tree...");
   const tree = await scrapeTree();
 
-  const all = merge(search, tree);
+  const discovered = merge(search, tree);
+  const restored = restoreKnownMunicipalities(discovered, previousMunicipalities(DATA, date));
+  const all = restored.entities;
   const municipalities = all.filter(isMunicipality);
   writeJson(`${dir}/entities.json`, {
     fecha: date,
     declarado_por_gobpe: total,
     entidades: all.length,
     municipalidades: municipalities.length,
+    entidades_descubiertas: discovered.length,
+    municipalidades_recuperadas_del_censo_anterior: restored.restored,
     cobertura_pct: total ? Math.round((1000 * all.length) / total) / 10 : null,
     lista: all,
   });
-  console.log(`${all.length} entities, ${municipalities.length} municipalities`);
+  console.log(
+    `${all.length} entities, ${municipalities.length} municipalities ` +
+      `(${restored.restored} restored from previous census)`
+  );
 
   const enrichedPath = `${dir}/enriched.jsonl`;
   const alreadyDone = readDone(enrichedPath).size;
@@ -78,20 +93,6 @@ async function scan(date: string): Promise<void> {
   });
 
   console.log(`done: ${dir}/enriched.jsonl`);
-}
-
-/** Municipality count from the newest run before `date`, or null if this is the first. */
-function previousCount(date: string): number | null {
-  if (!existsSync(DATA)) return null;
-  const earlier = readdirSync(DATA)
-    .filter((name) => /^\d{4}-\d{2}-\d{2}$/.test(name) && name < date)
-    .sort();
-  const last = earlier.at(-1);
-  if (!last) return null;
-
-  const path = `${DATA}/${last}/index.json`;
-  if (!existsSync(path)) return null;
-  return JSON.parse(readFileSync(path, "utf8")).municipalidades?.length ?? null;
 }
 
 function buildIndex(date: string, force = false): void {
@@ -106,7 +107,7 @@ function buildIndex(date: string, force = false): void {
   const municipalities = answered.filter((row) =>
     isMunicipality({ slug: row.slug, nombre: row.nombre, poder: row.poder, fuente: row.fuente })
   );
-  const check = checkCompleteness(municipalities, previousCount(date), null);
+  const check = checkCompleteness(municipalities, previousMunicipalityCount(DATA, date), null);
   if (!check.ok) {
     console.error(`this run looks incomplete:\n${explain(check)}`);
     if (!force) {

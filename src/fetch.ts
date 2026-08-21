@@ -36,6 +36,14 @@ export async function get(url: string, timeoutMs = 30_000): Promise<FetchResult>
     if (isBlocked(body)) {
       return { ok: false, status: response.status, error: BLOCK_MARKER, blocked: true };
     }
+    if (!response.ok) {
+      return {
+        ok: false,
+        status: response.status,
+        error: `HTTP ${response.status}`,
+        blocked: false,
+      };
+    }
     return { ok: true, status: response.status, body };
   } catch (error) {
     return {

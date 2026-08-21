@@ -52,6 +52,10 @@ bun test
 
 A run writes `data/YYYY-MM-DD/` and never touches an earlier one.
 
+After the first published census, a scan rechecks municipalities from the
+newest earlier published index when gob.pe's nondeterministic directory omits
+them. `entities.json` reports discovered and restored counts separately.
+
 **One request at a time.** gob.pe answers HTTP 418 and blocks the whole domain
 when it sees concurrency; it clears after about fourteen minutes. The pipeline
 is serial with a 0.7s pause on purpose. Do not add a worker pool.
