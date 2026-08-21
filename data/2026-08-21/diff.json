@@ -1,0 +1,503 @@
+{
+ "desde": "2026-08-08",
+ "hasta": "2026-08-21",
+ "altas": [
+  {
+   "slug": "munilapunta",
+   "nombre": "Municipalidad Distrital de La Punta - MDLP",
+   "indice": 70.5
+  },
+  {
+   "slug": "munipucusana",
+   "nombre": "Municipalidad Distrital de Pucusana - MDP",
+   "indice": 64.9
+  },
+  {
+   "slug": "muniirazola",
+   "nombre": "Municipalidad Distrital de Irazola - MDI",
+   "indice": 60.6
+  },
+  {
+   "slug": "munisubtanjalla",
+   "nombre": "Municipalidad Distrital de Subtanjalla - MDS",
+   "indice": 59.3
+  },
+  {
+   "slug": "munilambayeque",
+   "nombre": "Municipalidad Provincial de Lambayeque - MPL",
+   "indice": 59.3
+  },
+  {
+   "slug": "munijesusmaria",
+   "nombre": "Municipalidad Distrital de Jesús María - MDJM",
+   "indice": 57.9
+  },
+  {
+   "slug": "munibellaunion",
+   "nombre": "Municipalidad Distrital de Bella Unión - MDBU",
+   "indice": 48
+  },
+  {
+   "slug": "muniquerecotillo",
+   "nombre": "Municipalidad Distrital de Querecotillo - MDQ",
+   "indice": 48
+  },
+  {
+   "slug": "munisantarosa-lambayeque",
+   "nombre": "Municipalidad Distrital de Santa Rosa - Lambayeque - MDSR",
+   "indice": 48
+  },
+  {
+   "slug": "muniyanac",
+   "nombre": "Municipalidad Distrital de Yanac",
+   "indice": 48
+  },
+  {
+   "slug": "muniaija",
+   "nombre": "Municipalidad Provincial de Aija - MPA",
+   "indice": 48
+  },
+  {
+   "slug": "municarhuamayo",
+   "nombre": "Municipalidad Distrital de Carhuamayo - MDC",
+   "indice": 46.6
+  },
+  {
+   "slug": "munijazan",
+   "nombre": "Municipalidad Distrital de Jazán - MDJ",
+   "indice": 46.6
+  },
+  {
+   "slug": "munipativilca",
+   "nombre": "Municipalidad Distrital de Pativilca - MDP",
+   "indice": 46.6
+  },
+  {
+   "slug": "munisocabaya",
+   "nombre": "Municipalidad Distrital de Socabaya - MDS",
+   "indice": 46.6
+  },
+  {
+   "slug": "muniandabamba-acobamba",
+   "nombre": "Municipalidad Distrital de Andabamba  - Acobamba - MD-Andabamba-Hca",
+   "indice": 41
+  },
+  {
+   "slug": "municarmensalcedo",
+   "nombre": "Municipalidad Distrital de Carmen Salcedo - MDCS",
+   "indice": 41
+  },
+  {
+   "slug": "munichao",
+   "nombre": "Municipalidad Distrital de Chao - MDCH",
+   "indice": 41
+  },
+  {
+   "slug": "munichiguirip",
+   "nombre": "Municipalidad Distrital de Chiguirip - MDCH",
+   "indice": 41
+  },
+  {
+   "slug": "municochabamba-huaraz",
+   "nombre": "Municipalidad Distrital de Cochabamba - Huaraz - MD-Cochabamba",
+   "indice": 41
+  },
+  {
+   "slug": "municocharcas",
+   "nombre": "Municipalidad Distrital de Cocharcas - MDC",
+   "indice": 41
+  },
+  {
+   "slug": "municolquepata",
+   "nombre": "Municipalidad Distrital de Colquepata - MDC",
+   "indice": 41
+  },
+  {
+   "slug": "municombapata",
+   "nombre": "Municipalidad Distrital de Combapata - MDC",
+   "indice": 41
+  },
+  {
+   "slug": "municopallin",
+   "nombre": "Municipalidad Distrital de Copallin - MDC",
+   "indice": 41
+  },
+  {
+   "slug": "munilapeca",
+   "nombre": "Municipalidad Distrital de La Peca - MDLP",
+   "indice": 41
+  },
+  {
+   "slug": "munimatara",
+   "nombre": "Municipalidad Distrital de Matara - MDM",
+   "indice": 41
+  },
+  {
+   "slug": "munimato",
+   "nombre": "Municipalidad Distrital de Mato - MDM",
+   "indice": 41
+  },
+  {
+   "slug": "munipampamarca-cusco",
+   "nombre": "Municipalidad Distrital de Pampamarca - Cusco - MDP",
+   "indice": 41
+  },
+  {
+   "slug": "munipampas-pallasca",
+   "nombre": "Municipalidad Distrital de Pampas - Pallasca - MDP",
+   "indice": 41
+  },
+  {
+   "slug": "muniparcona",
+   "nombre": "Municipalidad Distrital de Parcona - MDP",
+   "indice": 41
+  },
+  {
+   "slug": "munisanjuandelurigancho",
+   "nombre": "Municipalidad Distrital de San Juan de Lurigancho - MDSJL",
+   "indice": 41
+  },
+  {
+   "slug": "munisanpedrodehuacarpana",
+   "nombre": "Municipalidad Distrital de San Pedro de Huacarpana - MDSPH",
+   "indice": 41
+  },
+  {
+   "slug": "muniyanatile",
+   "nombre": "Municipalidad Distrital de Yanatile - MDY",
+   "indice": 41
+  },
+  {
+   "slug": "munieldorado",
+   "nombre": "Municipalidad Provincial de El Dorado - MPD",
+   "indice": 41
+  },
+  {
+   "slug": "munichaparra",
+   "nombre": "Municipalidad Distrital de Chaparra - MDC",
+   "indice": 39.6
+  },
+  {
+   "slug": "munihualmay",
+   "nombre": "Municipalidad Distrital de Hualmay - MDH",
+   "indice": 39.6
+  },
+  {
+   "slug": "munichacoche",
+   "nombre": "Municipalidad Distrital de Chacoche",
+   "indice": 34
+  },
+  {
+   "slug": "municoishco",
+   "nombre": "Municipalidad Distrital de Coishco - MDC",
+   "indice": 34
+  },
+  {
+   "slug": "munijamalca",
+   "nombre": "Municipalidad Distrital de Jamalca - MDJ",
+   "indice": 34
+  },
+  {
+   "slug": "munimatacoto",
+   "nombre": "Municipalidad Distrital de Matacoto - MDM",
+   "indice": 34
+  },
+  {
+   "slug": "munimollepata-lalibertad",
+   "nombre": "Municipalidad Distrital de Mollepata - La Libertad - MDM",
+   "indice": 34
+  },
+  {
+   "slug": "munipichacani",
+   "nombre": "Municipalidad Distrital de Pichacani - MDP",
+   "indice": 34
+  },
+  {
+   "slug": "munisanjuandeyanac",
+   "nombre": "Municipalidad Distrital de San Juan de Yanac - MDSJY",
+   "indice": 34
+  },
+  {
+   "slug": "munisanpedrodecachora",
+   "nombre": "Municipalidad Distrital de San Pedro de Cachora - MDSPC",
+   "indice": 34
+  },
+  {
+   "slug": "munisicsibamba",
+   "nombre": "Municipalidad Distrital de Sicsibamba - MDS",
+   "indice": 34
+  },
+  {
+   "slug": "muniyanama",
+   "nombre": "Municipalidad Distrital de Yanama - MDY",
+   "indice": 34
+  },
+  {
+   "slug": "muniespinar",
+   "nombre": "Municipalidad Provincial de Espinar - MPE",
+   "indice": 34
+  },
+  {
+   "slug": "munisanpedrodeputinapunco",
+   "nombre": "Municipalidad Distrital de San Pedro de Putina Punco - MDSPPP",
+   "indice": 32.6
+  },
+  {
+   "slug": "muniacobamba-ancash",
+   "nombre": "Municipalidad Distrital de Acobamba - Ancash - MDA",
+   "indice": 27
+  },
+  {
+   "slug": "munialfonsougarte",
+   "nombre": "Municipalidad Distrital de Alfonso Ugarte - MDAU",
+   "indice": 27
+  },
+  {
+   "slug": "muniataura",
+   "nombre": "Municipalidad Distrital de Ataura - MDA",
+   "indice": 27
+  },
+  {
+   "slug": "muniayapata",
+   "nombre": "Municipalidad Distrital de Ayapata (Md Ayapata) - MDA",
+   "indice": 27
+  },
+  {
+   "slug": "municipalidad-distrital-de-caceres-del-peru-mdcp",
+   "nombre": "Municipalidad Distrital de Caceres del Perú (Mdcp) - MDCP",
+   "indice": 27
+  },
+  {
+   "slug": "municahuapanas",
+   "nombre": "Municipalidad Distrital de Cahuapanas - MDC",
+   "indice": 27
+  },
+  {
+   "slug": "munichingalpo",
+   "nombre": "Municipalidad Distrital de Chingalpo - MDCH",
+   "indice": 27
+  },
+  {
+   "slug": "municortegana",
+   "nombre": "Municipalidad Distrital de Cortegana - MDC",
+   "indice": 27
+  },
+  {
+   "slug": "municipalidad-distrital-de-curicaca-mdcuricaca",
+   "nombre": "Municipalidad Distrital de Curicaca (Mdcuricaca) - MDCuricaca",
+   "indice": 27
+  },
+  {
+   "slug": "munijorgechavez",
+   "nombre": "Municipalidad Distrital de Jorge Chávez - MDJCH",
+   "indice": 27
+  },
+  {
+   "slug": "munijosesabogal",
+   "nombre": "Municipalidad Distrital de José Sabogal - MDJS",
+   "indice": 27
+  },
+  {
+   "slug": "munipichirhua",
+   "nombre": "Municipalidad Distrital de Pichirhua - MD-Pichirhua",
+   "indice": 27
+  },
+  {
+   "slug": "munisanfelipe",
+   "nombre": "Municipalidad Distrital de San Felipe - MDSF",
+   "indice": 27
+  },
+  {
+   "slug": "munisincos",
+   "nombre": "Municipalidad Distrital de Sincos - MDS",
+   "indice": 27
+  },
+  {
+   "slug": "munitapacocha",
+   "nombre": "Municipalidad Distrital de Tapacocha - MDT",
+   "indice": 27
+  },
+  {
+   "slug": "munihuanipaca",
+   "nombre": "Municipalidad Distrital de Huanipaca - MDH",
+   "indice": 20
+  },
+  {
+   "slug": "munianchonga",
+   "nombre": "Municipalidad Distrital de Anchonga - MDA",
+   "indice": 10
+  },
+  {
+   "slug": "municashapampa",
+   "nombre": "Municipalidad Distrital de Cashapampa - MDH",
+   "indice": 10
+  },
+  {
+   "slug": "munijacasgrande",
+   "nombre": "Municipalidad Distrital de Jacas Grande - MDJG",
+   "indice": 10
+  },
+  {
+   "slug": "munilambras",
+   "nombre": "Municipalidad Distrital de Lambras - MDL",
+   "indice": 10
+  },
+  {
+   "slug": "munileimebamba",
+   "nombre": "Municipalidad Distrital de Leimebamba - MDL",
+   "indice": 10
+  },
+  {
+   "slug": "municipalidad-distrital-de-ragash",
+   "nombre": "Municipalidad Distrital de Ragash",
+   "indice": 10
+  },
+  {
+   "slug": "munisantalucia-ayacucho",
+   "nombre": "Municipalidad Distrital de Santa Lucía - Ayacucho - MDSL",
+   "indice": 10
+  },
+  {
+   "slug": "munisantotomas-luya",
+   "nombre": "Municipalidad Distrital de Santo Tomás - Luya - MDST",
+   "indice": 10
+  },
+  {
+   "slug": "munitantamayo",
+   "nombre": "Municipalidad Distrital de Tantamayo - MDT",
+   "indice": 10
+  },
+  {
+   "slug": "munisanjuandeloro",
+   "nombre": "Municipalidad Distrital del San Juan del Oro - MDSJO",
+   "indice": 10
+  },
+  {
+   "slug": "municarhuanca",
+   "nombre": "Municipalidad Distrital de Carhuanca - MDC",
+   "indice": 0
+  },
+  {
+   "slug": "municirca",
+   "nombre": "Municipalidad Distrital de Circa - MDC",
+   "indice": 0
+  },
+  {
+   "slug": "muniquerocoto",
+   "nombre": "Municipalidad Distrital de Querocoto - MDQ",
+   "indice": 0
+  },
+  {
+   "slug": "muniruparupa",
+   "nombre": "Municipalidad Distrital de Rupa Rupa - MDRR",
+   "indice": 0
+  }
+ ],
+ "bajas": [
+  {
+   "slug": "munisantateresa",
+   "nombre": "Municipalidad Distrital Santa Teresa - MDST",
+   "indice": 41
+  }
+ ],
+ "movimientos": [
+  {
+   "slug": "munihuicungo",
+   "nombre": "Municipalidad Distrital de Huicungo - MDH",
+   "antes": 27,
+   "ahora": 48,
+   "cambio": 21,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniatalaya",
+   "nombre": "Municipalidad Provincial de Atalaya - MPA",
+   "antes": 41,
+   "ahora": 52.3,
+   "cambio": 11.3,
+   "sistemas_nuevos": [
+    "mpv.muniatalaya.gob.pe",
+    "seguimiento.muniatalaya.gob.pe"
+   ]
+  },
+  {
+   "slug": "munihuachocolpa-huancavelica",
+   "nombre": "Municipalidad Distrital de Huachocolpa - Huancavelica  - MDH",
+   "antes": 17,
+   "ahora": 27,
+   "cambio": 10,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municoasa",
+   "nombre": "Municipalidad Distrital de Coasa - MDC",
+   "antes": 27,
+   "ahora": 17,
+   "cambio": -10,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munisanluis-lima",
+   "nombre": "Municipalidad Distrital de San Luis - Lima - MDSL",
+   "antes": 48,
+   "ahora": 41,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munihuachac",
+   "nombre": "Municipalidad Distrital de Huáchac - MDH",
+   "antes": 41,
+   "ahora": 34,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munisantaleonor",
+   "nombre": "Municipalidad Distrital de Santa Leonor - MDSL",
+   "antes": 20,
+   "ahora": 27,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munilavictoria",
+   "nombre": "Municipalidad Distrital de La Victoria - Lima - MLV",
+   "antes": 88.8,
+   "ahora": 83.1,
+   "cambio": -5.7,
+   "sistemas_nuevos": [
+    "mesadepartes.munilavictoria.gob.pe"
+   ]
+  },
+  {
+   "slug": "munimachupicchu",
+   "nombre": "Municipalidad Distrital de Machupicchu - MDM",
+   "antes": 46.6,
+   "ahora": 52.3,
+   "cambio": 5.7,
+   "sistemas_nuevos": [
+    "tramite.munimachupicchu.gob.pe"
+   ]
+  },
+  {
+   "slug": "muniarequipa",
+   "nombre": "Municipalidad Provincial de Arequipa - MPA",
+   "antes": 52.3,
+   "ahora": 57.9,
+   "cambio": 5.6,
+   "sistemas_nuevos": [
+    "casillaelectronica.muniarequipa.gob.pe"
+   ]
+  }
+ ],
+ "resumen": {
+  "antes": 1794,
+  "ahora": 1871,
+  "altas": 78,
+  "bajas": 1,
+  "subieron": 6,
+  "bajaron": 4,
+  "sin_cambio": 1783
+ }
+}
