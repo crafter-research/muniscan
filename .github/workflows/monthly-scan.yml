@@ -23,7 +23,7 @@ permissions:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    timeout-minutes: 325
     steps:
       - uses: actions/checkout@v4
 
@@ -49,6 +49,9 @@ jobs:
       - name: Diff against previous run
         if: steps.dates.outputs.previous != steps.dates.outputs.today
         run: bun run src/cli.ts diff "${{ steps.dates.outputs.previous }}" "${{ steps.dates.outputs.today }}"
+
+      - name: Observe 100-site health sample
+        run: bun run src/cli.ts health-sample "${{ steps.dates.outputs.today }}"
 
       - name: Open pull request with the delta
         uses: peter-evans/create-pull-request@v7
