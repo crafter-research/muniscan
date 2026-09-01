@@ -1,0 +1,198 @@
+{
+ "desde": "2026-08-21",
+ "hasta": "2026-09-01",
+ "altas": [
+  {
+   "slug": "muniperene",
+   "nombre": "Municipalidad Distrital de Perene - MDP",
+   "indice": 59.3
+  },
+  {
+   "slug": "muniquehue",
+   "nombre": "Municipalidad Distrital de Quehue - MDQ",
+   "indice": 46.6
+  },
+  {
+   "slug": "munielcarmen-chincha",
+   "nombre": "Municipalidad Distrital de El Carmen - Chincha - MDEC",
+   "indice": 41
+  },
+  {
+   "slug": "munipampaschico",
+   "nombre": "Municipalidad Distrital de Pampas Chico - MDPCH",
+   "indice": 41
+  },
+  {
+   "slug": "munisalitral-morropon",
+   "nombre": "Municipalidad Distrital de Salitral - Morropón - MDS",
+   "indice": 41
+  },
+  {
+   "slug": "munisantodomingodeanda",
+   "nombre": "Municipalidad Distrital de Santo Domingo de Anda - MDSDA",
+   "indice": 41
+  },
+  {
+   "slug": "munihuayhuay",
+   "nombre": "Municipalidad Distrital de Huay Huay - MDH",
+   "indice": 34
+  },
+  {
+   "slug": "municipalidad-distrital-de-huayllan",
+   "nombre": "Municipalidad Distrital de Huayllan",
+   "indice": 34
+  },
+  {
+   "slug": "munijoseleonardoortiz",
+   "nombre": "Municipalidad Distrital de José Leonardo Ortiz - MDJLO",
+   "indice": 34
+  },
+  {
+   "slug": "muniquinuabamba",
+   "nombre": "Municipalidad Distrital de Quinuabamba - MDQ",
+   "indice": 34
+  },
+  {
+   "slug": "munitauca",
+   "nombre": "Municipalidad Distrital de Tauca - MDT",
+   "indice": 34
+  },
+  {
+   "slug": "munininabamba-santacruz",
+   "nombre": "Municipalidad Distrital de Ninabamba - Santa Cruz - MDN",
+   "indice": 27
+  },
+  {
+   "slug": "munisallique",
+   "nombre": "Municipalidad Distrital de Sallique - MDS",
+   "indice": 27
+  },
+  {
+   "slug": "muniuranmarca",
+   "nombre": "Municipalidad Distrital de Uranmarca - MDU",
+   "indice": 27
+  },
+  {
+   "slug": "munilacuesta",
+   "nombre": "Municipalidad Distrital de La Cuesta - MDLC",
+   "indice": 20
+  },
+  {
+   "slug": "municotaparaco",
+   "nombre": "Municipalidad Distrital de Cotaparaco - MDC",
+   "indice": 10
+  },
+  {
+   "slug": "munillacllin",
+   "nombre": "Municipalidad Distrital de Llacllin - MDLL",
+   "indice": 10
+  },
+  {
+   "slug": "munimarca",
+   "nombre": "Municipalidad Distrital de Marca - MDM",
+   "indice": 10
+  },
+  {
+   "slug": "munipallasca-ancash",
+   "nombre": "Municipalidad Distrital de Pallasca - Áncash - MDP",
+   "indice": 10
+  },
+  {
+   "slug": "municipalidad-distrital-de-pararin-md-pararin",
+   "nombre": "Municipalidad Distrital de Pararín (Md Pararin) - MD-PARARI",
+   "indice": 10
+  },
+  {
+   "slug": "munisantarosa-ancash",
+   "nombre": "Municipalidad Distrital de Santa Rosa - Ancash - MDSR",
+   "indice": 10
+  },
+  {
+   "slug": "munisantalucia-sanmartin",
+   "nombre": "Municipalidad Distrital de Santa Lucía - San Martín - MDSL",
+   "indice": 0
+  }
+ ],
+ "bajas": [],
+ "movimientos": [
+  {
+   "slug": "municomas-concepcion",
+   "nombre": "Municipalidad Distrital de Comas - Concepción - MDC",
+   "antes": 15.6,
+   "ahora": 46.6,
+   "cambio": 31,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munimanta",
+   "nombre": "Municipalidad Distrital de Manta - MDM",
+   "antes": 10,
+   "ahora": 27,
+   "cambio": 17,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municielopunco",
+   "nombre": "Municipalidad Distrital de Cielo Punco - MDCP",
+   "antes": 34,
+   "ahora": 41,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniacopia",
+   "nombre": "Municipalidad Distrital de Acopia - MDA",
+   "antes": 27,
+   "ahora": 34,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munichachapoyas",
+   "nombre": "Municipalidad Provincial de Chachapoyas - MPCH",
+   "antes": 38.3,
+   "ahora": 45.2,
+   "cambio": 6.9,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munisanjeronimo-cusco",
+   "nombre": "Municipalidad Distrital de San Jerónimo - Cusco - MDSJ",
+   "antes": 69.1,
+   "ahora": 74.8,
+   "cambio": 5.7,
+   "sistemas_nuevos": [
+    "sicop.sistema01.munisanjeronimocusco.gob.pe"
+   ]
+  },
+  {
+   "slug": "munilapunta",
+   "nombre": "Municipalidad Distrital de La Punta - MDLP",
+   "antes": 70.5,
+   "ahora": 76.1,
+   "cambio": 5.6,
+   "sistemas_nuevos": [
+    "pagosenlinea.munilapunta.gob.pe"
+   ]
+  },
+  {
+   "slug": "muninuevochimbote",
+   "nombre": "Municipalidad Distrital de Nuevo Chimbote - MDNCH",
+   "antes": 59.3,
+   "ahora": 64.9,
+   "cambio": 5.6,
+   "sistemas_nuevos": [
+    "std.muninuevochimbote.gob.pe"
+   ]
+  }
+ ],
+ "resumen": {
+  "antes": 1871,
+  "ahora": 1893,
+  "altas": 22,
+  "bajas": 0,
+  "subieron": 8,
+  "bajaron": 0,
+  "sin_cambio": 1863
+ }
+}
