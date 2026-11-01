@@ -1,0 +1,1169 @@
+{
+ "desde": "2026-08-21",
+ "hasta": "2026-11-01",
+ "altas": [
+  {
+   "slug": "munibarranca",
+   "nombre": "Municipalidad Provincial de Barranca - MPB",
+   "indice": 64.9
+  },
+  {
+   "slug": "muniperene",
+   "nombre": "Municipalidad Distrital de Perene - MDP",
+   "indice": 59.3
+  },
+  {
+   "slug": "muniquehue",
+   "nombre": "Municipalidad Distrital de Quehue - MDQ",
+   "indice": 46.6
+  },
+  {
+   "slug": "munihuaraz",
+   "nombre": "Municipalidad Provincial de Huaraz - MPH",
+   "indice": 46.6
+  },
+  {
+   "slug": "munielcarmen-chincha",
+   "nombre": "Municipalidad Distrital de El Carmen - Chincha - MDEC",
+   "indice": 41
+  },
+  {
+   "slug": "munilivitaca",
+   "nombre": "Municipalidad Distrital de Livitaca - MDL",
+   "indice": 41
+  },
+  {
+   "slug": "munipampaschico",
+   "nombre": "Municipalidad Distrital de Pampas Chico - MDPCH",
+   "indice": 41
+  },
+  {
+   "slug": "munisantodomingodeanda",
+   "nombre": "Municipalidad Distrital de Santo Domingo de Anda - MDSDA",
+   "indice": 41
+  },
+  {
+   "slug": "munitayacaja",
+   "nombre": "Municipalidad Provincial de Tayacaja - MPT",
+   "indice": 39.6
+  },
+  {
+   "slug": "municipalidad-distrital-de-huayllan",
+   "nombre": "Municipalidad Distrital de Huayllan",
+   "indice": 34
+  },
+  {
+   "slug": "muniillimo",
+   "nombre": "Municipalidad Distrital de Illimo - MDI",
+   "indice": 34
+  },
+  {
+   "slug": "munijalcagrande",
+   "nombre": "Municipalidad Distrital de Jalca Grande - MD-JGRANDE",
+   "indice": 34
+  },
+  {
+   "slug": "munipampahermosa-loreto",
+   "nombre": "Municipalidad Distrital de Pampa Hermosa - MDPH",
+   "indice": 34
+  },
+  {
+   "slug": "muniquinuabamba",
+   "nombre": "Municipalidad Distrital de Quinuabamba - MDQ",
+   "indice": 34
+  },
+  {
+   "slug": "municomandantenoel",
+   "nombre": "Municipalidad Distrital de Comandante Noel",
+   "indice": 27
+  },
+  {
+   "slug": "munimagdalena-chachapoyas",
+   "nombre": "Municipalidad Distrital de Magdalena - Chachapoyas - MDM",
+   "indice": 27
+  },
+  {
+   "slug": "munininabamba-santacruz",
+   "nombre": "Municipalidad Distrital de Ninabamba - Santa Cruz - MDN",
+   "indice": 27
+  },
+  {
+   "slug": "munisallique",
+   "nombre": "Municipalidad Distrital de Sallique - MDS",
+   "indice": 27
+  },
+  {
+   "slug": "muniuranmarca",
+   "nombre": "Municipalidad Distrital de Uranmarca - MDU",
+   "indice": 27
+  },
+  {
+   "slug": "munilacuesta",
+   "nombre": "Municipalidad Distrital de La Cuesta - MDLC",
+   "indice": 20
+  },
+  {
+   "slug": "munisanfranciscodedaguas",
+   "nombre": "Municipalidad Distrital de San Francisco de Daguas  - MDSFD",
+   "indice": 20
+  },
+  {
+   "slug": "muniambar",
+   "nombre": "Municipalidad Distrital de Ámbar - MDA",
+   "indice": 10
+  },
+  {
+   "slug": "municotaparaco",
+   "nombre": "Municipalidad Distrital de Cotaparaco - MDC",
+   "indice": 10
+  },
+  {
+   "slug": "munihuancas",
+   "nombre": "Municipalidad Distrital de Huancas - MDH",
+   "indice": 10
+  },
+  {
+   "slug": "munilevanto",
+   "nombre": "Municipalidad Distrital de Levanto - MDL",
+   "indice": 10
+  },
+  {
+   "slug": "munillacllin",
+   "nombre": "Municipalidad Distrital de Llacllin - MDLL",
+   "indice": 10
+  },
+  {
+   "slug": "munimarca",
+   "nombre": "Municipalidad Distrital de Marca - MDM",
+   "indice": 10
+  },
+  {
+   "slug": "munipallasca-ancash",
+   "nombre": "Municipalidad Distrital de Pallasca - Áncash - MDP",
+   "indice": 10
+  },
+  {
+   "slug": "municipalidad-distrital-de-pararin-md-pararin",
+   "nombre": "Municipalidad Distrital de Pararín (Md Pararin) - MD-PARARI",
+   "indice": 10
+  },
+  {
+   "slug": "municipalidad-distrital-de-quinjalca-md-quinjalca",
+   "nombre": "Municipalidad Distrital de Quinjalca (Md Quinjalca) - MD-QUINJALCA",
+   "indice": 10
+  },
+  {
+   "slug": "munisanisidrodelmaino",
+   "nombre": "Municipalidad Distrital de San Isidro del Maino - MDSIM",
+   "indice": 10
+  },
+  {
+   "slug": "munisantarosa-ancash",
+   "nombre": "Municipalidad Distrital de Santa Rosa - Ancash - MDSR",
+   "indice": 10
+  },
+  {
+   "slug": "munimariscalcastilla-amazonas",
+   "nombre": "Municipalidad Distrital Mariscal Castilla - Amazonas - MDMC",
+   "indice": 10
+  }
+ ],
+ "bajas": [
+  {
+   "slug": "munitomay-kichwa",
+   "nombre": "Municipalidad Distrital de Tomay-kichwa - MDT",
+   "indice": 48
+  },
+  {
+   "slug": "munitmc",
+   "nombre": "munitmc",
+   "indice": 48
+  },
+  {
+   "slug": "munitoraya",
+   "nombre": "Municipalidad Distrital de Toraya - MD-TORAYA",
+   "indice": 41
+  },
+  {
+   "slug": "munitongod",
+   "nombre": "Municipalidad Distrital de Tongod - MDT",
+   "indice": 34
+  },
+  {
+   "slug": "munitomepampa",
+   "nombre": "Municipalidad Distrital de Tomepampa - MDT",
+   "indice": 20
+  },
+  {
+   "slug": "munitisco",
+   "nombre": "Municipalidad Distrital de Tisco - MDT",
+   "indice": 10
+  }
+ ],
+ "movimientos": [
+  {
+   "slug": "munialtotrujillo",
+   "nombre": "Municipalidad Distrital de Alto Trujilo - MDAT",
+   "antes": 5.6,
+   "ahora": 39.6,
+   "cambio": 34,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municomas-concepcion",
+   "nombre": "Municipalidad Distrital de Comas - Concepción - MDC",
+   "antes": 15.6,
+   "ahora": 46.6,
+   "cambio": 31,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munijaqui",
+   "nombre": "Municipalidad Distrital de Jaquí - MDJ",
+   "antes": 10,
+   "ahora": 34,
+   "cambio": 24,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munisuyo",
+   "nombre": "Municipalidad Distrital de Suyo - MDS",
+   "antes": 15.6,
+   "ahora": 32.6,
+   "cambio": 17,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munimanta",
+   "nombre": "Municipalidad Distrital de Manta - MDM",
+   "antes": 10,
+   "ahora": 27,
+   "cambio": 17,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munisantarosadeocopa",
+   "nombre": "Municipalidad Distrital de Santa Rosa de Ocopa - MDSRO",
+   "antes": 10,
+   "ahora": 27,
+   "cambio": 17,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munivilca",
+   "nombre": "Municipalidad Distrital de Vilca - MD-VILCA",
+   "antes": 10,
+   "ahora": 27,
+   "cambio": 17,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municochamarca",
+   "nombre": "Municipalidad Distrital de Cochamarca - MDC",
+   "antes": 27,
+   "ahora": 41,
+   "cambio": 14,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municiudadnueva",
+   "nombre": "Municipalidad Distrital de Ciudad Nueva - MDCN",
+   "antes": 57.9,
+   "ahora": 70.5,
+   "cambio": 12.6,
+   "sistemas_nuevos": [
+    "demo11.municiudadnueva.gob.pe"
+   ]
+  },
+  {
+   "slug": "muniecharati",
+   "nombre": "Municipalidad Distrital de Echarati - MDE",
+   "antes": 70.5,
+   "ahora": 81.8,
+   "cambio": 11.3,
+   "sistemas_nuevos": [
+    "radio.muniecharati.gob.pe",
+    "wordpress.muniecharati.gob.pe"
+   ]
+  },
+  {
+   "slug": "municipalidad-distrital-de-pampachiri",
+   "nombre": "Municipalidad Distrital de Pampachiri",
+   "antes": 17,
+   "ahora": 27,
+   "cambio": 10,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municipalidad-distrital-de-cayarani-md-cayarani",
+   "nombre": "Municipalidad Distrital de Cayarani (Md   Cayarani) - MD - CAYARANI",
+   "antes": 10,
+   "ahora": 20,
+   "cambio": 10,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munitotora",
+   "nombre": "Municipalidad Distrital de Totora - MDT",
+   "antes": 10,
+   "ahora": 20,
+   "cambio": 10,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniandabamba-cajamarca",
+   "nombre": "Municipalidad Distrital de Andabamba - Cajamarca - MDA",
+   "antes": 0,
+   "ahora": 10,
+   "cambio": 10,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municolcha",
+   "nombre": "Municipalidad Distrital de Colcha - MDC",
+   "antes": 10,
+   "ahora": 0,
+   "cambio": -10,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munihuamanga",
+   "nombre": "Municipalidad Provincial de Huamanga - MPH",
+   "antes": 60.6,
+   "ahora": 70.5,
+   "cambio": 9.9,
+   "sistemas_nuevos": [
+    "ayacuchoemprende.munihuamanga.gob.pe",
+    "mesadeayuda.munihuamanga.gob.pe",
+    "rvm.munihuamanga.gob.pe"
+   ]
+  },
+  {
+   "slug": "munitrujillo",
+   "nombre": "Municipalidad Provincial de Trujillo - MPT",
+   "antes": 45.2,
+   "ahora": 52.3,
+   "cambio": 7.1,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munimajes",
+   "nombre": "Municipalidad Distrital de Majes - MDM",
+   "antes": 52.3,
+   "ahora": 45.2,
+   "cambio": -7.1,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munipuentepiedra",
+   "nombre": "Municipalidad Distrital de Puente Piedra - MDPP",
+   "antes": 94.4,
+   "ahora": 87.4,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munijuanjui",
+   "nombre": "Municipalidad Provincial de Mariscal Cáceres - MPMC",
+   "antes": 76.1,
+   "ahora": 83.1,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munibarranco",
+   "nombre": "Municipalidad Distrital de Barranco - MDB",
+   "antes": 88.8,
+   "ahora": 81.8,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munilavictoria",
+   "nombre": "Municipalidad Distrital de La Victoria - Lima - MLV",
+   "antes": 83.1,
+   "ahora": 76.1,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniventanilla",
+   "nombre": "Municipalidad Distrital de Ventanilla - MDV",
+   "antes": 69.1,
+   "ahora": 76.1,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munitambogrande",
+   "nombre": "Municipalidad Distrital de Tambogrande - MDT",
+   "antes": 64.9,
+   "ahora": 71.9,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munibellavista",
+   "nombre": "Municipalidad Distrital de Bellavista - Callao - MDB",
+   "antes": 63.5,
+   "ahora": 70.5,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munilince",
+   "nombre": "Municipalidad Distrital de Lince - MDL",
+   "antes": 77.5,
+   "ahora": 70.5,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munisupe",
+   "nombre": "Municipalidad Distrital de Supe - MDS",
+   "antes": 57.9,
+   "ahora": 64.9,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniabancay",
+   "nombre": "Municipalidad Provincial de Abancay - MPA",
+   "antes": 71.9,
+   "ahora": 64.9,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munichiclayo",
+   "nombre": "Municipalidad Provincial de Chiclayo - MPCH",
+   "antes": 57.9,
+   "ahora": 64.9,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munihuancayo",
+   "nombre": "Municipalidad Provincial de Huancayo - MPH",
+   "antes": 71.9,
+   "ahora": 64.9,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munichorrillos",
+   "nombre": "Municipalidad Distrital de Chorrillos - MDCH",
+   "antes": 70.5,
+   "ahora": 63.5,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munibrena",
+   "nombre": "Municipalidad Distrital de Breña - MDB",
+   "antes": 66.3,
+   "ahora": 59.3,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munichalamarca",
+   "nombre": "Municipalidad Distrital de Chalamarca - MDCH",
+   "antes": 52.3,
+   "ahora": 59.3,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municurahuasi",
+   "nombre": "Municipalidad Distrital de Curahuasi - MDC",
+   "antes": 66.3,
+   "ahora": 59.3,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munilajas",
+   "nombre": "Municipalidad Distrital de Lajas - MDL",
+   "antes": 52.3,
+   "ahora": 59.3,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munipuntahermosa",
+   "nombre": "Municipalidad Distrital de Punta Hermosa - MDPH",
+   "antes": 66.3,
+   "ahora": 59.3,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munitalavera",
+   "nombre": "Municipalidad Distrital de Talavera - MDT",
+   "antes": 66.3,
+   "ahora": 59.3,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniyarinacocha",
+   "nombre": "Municipalidad Distrital de Yarinacocha - MDY",
+   "antes": 66.3,
+   "ahora": 59.3,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munipueblonuevo-lambayeque",
+   "nombre": "Municipalidad Distrital de Pueblo Nuevo - Lambayeque - MDPN",
+   "antes": 48,
+   "ahora": 55,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniislaymollendo",
+   "nombre": "Municipalidad Provincial de Islay - MPI",
+   "antes": 48,
+   "ahora": 55,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munisanmartin",
+   "nombre": "Municipalidad Provincial de San Martín - MPSM",
+   "antes": 48,
+   "ahora": 55,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munihuasahuasi",
+   "nombre": "Municipalidad Distrital de Huasahuasi - MDH",
+   "antes": 46.6,
+   "ahora": 53.6,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munijosemanuelquiroz",
+   "nombre": "Municipalidad Distrital de José Manuel Quiroz - MDJMQ",
+   "antes": 46.6,
+   "ahora": 53.6,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munilayo",
+   "nombre": "Municipalidad Distrital de Layo  - MDL",
+   "antes": 46.6,
+   "ahora": 53.6,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munimotupe",
+   "nombre": "Municipalidad Distrital de Motupe - MDM",
+   "antes": 46.6,
+   "ahora": 53.6,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniacobamba",
+   "nombre": "Municipalidad Provincial de Acobamba - MPA",
+   "antes": 60.6,
+   "ahora": 53.6,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munimoyobamba",
+   "nombre": "Municipalidad Provincial de Moyobamba - MPM",
+   "antes": 60.6,
+   "ahora": 53.6,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munisullana",
+   "nombre": "Municipalidad Provincial de Sullana - MPS",
+   "antes": 60.6,
+   "ahora": 53.6,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniviru",
+   "nombre": "Municipalidad Provincial de Virú - MPV",
+   "antes": 60.6,
+   "ahora": 53.6,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munipaucara",
+   "nombre": "Municipalidad Distrital de Paucará - MDP",
+   "antes": 59.3,
+   "ahora": 52.3,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munilambayeque",
+   "nombre": "Municipalidad Provincial de Lambayeque - MPL",
+   "antes": 59.3,
+   "ahora": 52.3,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniancahuasi",
+   "nombre": "Municipalidad Distrital de Ancahuasi - MDA",
+   "antes": 55,
+   "ahora": 48,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municayalti",
+   "nombre": "Municipalidad Distrital de Cayaltí - MDC",
+   "antes": 41,
+   "ahora": 48,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municusipata",
+   "nombre": "Municipalidad Distrital de Cusipata - MDC",
+   "antes": 41,
+   "ahora": 48,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munihuallaga-sanmartin",
+   "nombre": "Municipalidad Distrital de Huallaga  - MDH",
+   "antes": 55,
+   "ahora": 48,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniindependencia-lima",
+   "nombre": "Municipalidad Distrital de Independencia - Lima - MDI",
+   "antes": 41,
+   "ahora": 48,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munijepelacio",
+   "nombre": "Municipalidad Distrital de Jepelacio - MDJ",
+   "antes": 55,
+   "ahora": 48,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munillacanora",
+   "nombre": "Municipalidad Distrital de Llacanora - MDLL",
+   "antes": 41,
+   "ahora": 48,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munimagdalena-lima",
+   "nombre": "Municipalidad Distrital de Magdalena del Mar - MDMM",
+   "antes": 55,
+   "ahora": 48,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munipampas-ancash",
+   "nombre": "Municipalidad Distrital de Pampas - Áncash - MDP",
+   "antes": 41,
+   "ahora": 48,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munipampas-pallasca",
+   "nombre": "Municipalidad Distrital de Pampas - Pallasca - MDP",
+   "antes": 41,
+   "ahora": 48,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munijacobohunter",
+   "nombre": "Municipalidad Distrital Jacobo Hunter  - MDJH",
+   "antes": 55,
+   "ahora": 48,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniambo",
+   "nombre": "Municipalidad Provincial de Ambo - MPA",
+   "antes": 55,
+   "ahora": 48,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munibagua",
+   "nombre": "Municipalidad Provincial de Bagua - MPB",
+   "antes": 55,
+   "ahora": 48,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municoncepcion-junin",
+   "nombre": "Municipalidad Provincial de Concepción - MPC",
+   "antes": 41,
+   "ahora": 48,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniucayali",
+   "nombre": "Municipalidad Provincial de Ucayali - Contamana - MPU",
+   "antes": 41,
+   "ahora": 48,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municusco",
+   "nombre": "Municipalidad Provincial del Cusco - MPC",
+   "antes": 55,
+   "ahora": 48,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munimanantay",
+   "nombre": "Municipalidad Distrital de Manantay - MDM",
+   "antes": 53.6,
+   "ahora": 46.6,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munimarcavelica",
+   "nombre": "Municipalidad Distrital de Marcavelica - MDM",
+   "antes": 53.6,
+   "ahora": 46.6,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munipalca-huancavelica",
+   "nombre": "Municipalidad Distrital de Palca - Huancavelica - MDP",
+   "antes": 39.6,
+   "ahora": 46.6,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munipangoa",
+   "nombre": "Municipalidad Distrital de Pangoa - MDP",
+   "antes": 53.6,
+   "ahora": 46.6,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municastrovirreyna",
+   "nombre": "Municipalidad Provincial de Castrovirreyna - MPC",
+   "antes": 53.6,
+   "ahora": 46.6,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municaraz",
+   "nombre": "Municipalidad Provincial de Huaylas - MPH",
+   "antes": 53.6,
+   "ahora": 46.6,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munitacna",
+   "nombre": "Municipalidad Provincial de Tacna - MPT",
+   "antes": 39.6,
+   "ahora": 46.6,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniyungay",
+   "nombre": "Municipalidad Provincial de Yungay - MPY",
+   "antes": 53.6,
+   "ahora": 46.6,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munialonsodealvarado",
+   "nombre": "Municipalidad Distrital de Alonso de Alvarado - MDAA",
+   "antes": 34,
+   "ahora": 41,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municielopunco",
+   "nombre": "Municipalidad Distrital de Cielo Punco - MDCP",
+   "antes": 34,
+   "ahora": 41,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municocachacra",
+   "nombre": "Municipalidad Distrital de Cocachacra - MDC",
+   "antes": 48,
+   "ahora": 41,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municolan",
+   "nombre": "Municipalidad Distrital de Colán - MDC",
+   "antes": 48,
+   "ahora": 41,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municolcabamba-huancavelica",
+   "nombre": "Municipalidad Distrital de Colcabamba - Huancavelica - MDC",
+   "antes": 34,
+   "ahora": 41,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munihabana",
+   "nombre": "Municipalidad Distrital de Habana - MDH",
+   "antes": 48,
+   "ahora": 41,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munihuayllabamba-urubamba",
+   "nombre": "Municipalidad Distrital de Huayllabamba - Cusco - MDH",
+   "antes": 48,
+   "ahora": 41,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munilaarena",
+   "nombre": "Municipalidad Distrital de La Arena - MDLA",
+   "antes": 48,
+   "ahora": 41,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munimiraflores-lima",
+   "nombre": "Municipalidad Distrital de Miraflores - Lima - MDM",
+   "antes": 48,
+   "ahora": 41,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munipacasmayo-pacasmayo",
+   "nombre": "Municipalidad Distrital de Pacasmayo - MDP",
+   "antes": 48,
+   "ahora": 41,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munipueblolibre",
+   "nombre": "Municipalidad Distrital de Pueblo Libre - Ancash - MDPL",
+   "antes": 48,
+   "ahora": 41,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniquerecotillo",
+   "nombre": "Municipalidad Distrital de Querecotillo - MDQ",
+   "antes": 48,
+   "ahora": 41,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munisanborja",
+   "nombre": "Municipalidad Distrital de San Borja - MDSB",
+   "antes": 48,
+   "ahora": 41,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munilima",
+   "nombre": "Municipalidad Metropolitana de Lima - MML",
+   "antes": 34,
+   "ahora": 41,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munipucayacu",
+   "nombre": "Municipalidad Distrital de Pucayacu - MDP",
+   "antes": 46.6,
+   "ahora": 39.6,
+   "cambio": -7,
+   "sistemas_nuevos": [
+    "mesadepartes.munipucayacu.gob.pe"
+   ]
+  },
+  {
+   "slug": "munijorgebasadre",
+   "nombre": "Municipalidad Provincial Jorge Basadre - MPJB",
+   "antes": 46.6,
+   "ahora": 39.6,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniacopia",
+   "nombre": "muniacopia",
+   "antes": 27,
+   "ahora": 34,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municharat",
+   "nombre": "Municipalidad Distrital de Charat - MDCH",
+   "antes": 27,
+   "ahora": 34,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munimochumi",
+   "nombre": "Municipalidad Distrital de Mochumí - MDM",
+   "antes": 41,
+   "ahora": 34,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munisanjuandelurigancho",
+   "nombre": "Municipalidad Distrital de San Juan de Lurigancho - MDSJL",
+   "antes": 41,
+   "ahora": 34,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munivelille",
+   "nombre": "Municipalidad Distrital de Velille - MDV",
+   "antes": 27,
+   "ahora": 34,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munipardomiguel",
+   "nombre": "Municipalidad Distrital de Pardo Miguel - MDPM",
+   "antes": 34,
+   "ahora": 27,
+   "cambio": -7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "municoasa",
+   "nombre": "Municipalidad Distrital de Coasa - MDC",
+   "antes": 17,
+   "ahora": 24,
+   "cambio": 7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munichachapoyas",
+   "nombre": "Municipalidad Provincial de Chachapoyas - MPCH",
+   "antes": 38.3,
+   "ahora": 45.2,
+   "cambio": 6.9,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munisanjeronimo-cusco",
+   "nombre": "Municipalidad Distrital de San Jerónimo - Cusco - MDSJ",
+   "antes": 69.1,
+   "ahora": 74.8,
+   "cambio": 5.7,
+   "sistemas_nuevos": [
+    "sicop.sistema01.munisanjeronimocusco.gob.pe"
+   ]
+  },
+  {
+   "slug": "munilamar",
+   "nombre": "Municipalidad Provincial de La Mar - MPLM",
+   "antes": 46.6,
+   "ahora": 52.3,
+   "cambio": 5.7,
+   "sistemas_nuevos": [
+    "sgd.munilamar.gob.pe"
+   ]
+  },
+  {
+   "slug": "munimancora",
+   "nombre": "Municipalidad Distrital de Mancora - MDMancora",
+   "antes": 52.3,
+   "ahora": 46.6,
+   "cambio": -5.7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munipuno",
+   "nombre": "Municipalidad Provincial de Puno - MPP",
+   "antes": 38.3,
+   "ahora": 32.6,
+   "cambio": -5.7,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muninuevochimbote",
+   "nombre": "Municipalidad Distrital de Nuevo Chimbote - MDNCH",
+   "antes": 59.3,
+   "ahora": 64.9,
+   "cambio": 5.6,
+   "sistemas_nuevos": [
+    "std.muninuevochimbote.gob.pe"
+   ]
+  },
+  {
+   "slug": "munitalara",
+   "nombre": "Municipalidad Provincial de Talara - MPT",
+   "antes": 57.9,
+   "ahora": 52.3,
+   "cambio": -5.6,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniacobamba-tarma",
+   "nombre": "Municipalidad Distrital de Acobamba - Tarma - MDA",
+   "antes": 41,
+   "ahora": 46.6,
+   "cambio": 5.6,
+   "sistemas_nuevos": [
+    "validador.muniacobamba-tarma.gob.pe"
+   ]
+  },
+  {
+   "slug": "municoyllurqui",
+   "nombre": "municoyllurqui",
+   "antes": 41,
+   "ahora": 46.6,
+   "cambio": 5.6,
+   "sistemas_nuevos": [
+    "webmail.municoyllurqui.gob.pe"
+   ]
+  },
+  {
+   "slug": "munitamburco",
+   "nombre": "Municipalidad Distrital de Tamburco  - MDT",
+   "antes": 39.6,
+   "ahora": 45.2,
+   "cambio": 5.6,
+   "sistemas_nuevos": [
+    "www.munitamburco.gob.pe"
+   ]
+  },
+  {
+   "slug": "muniascope",
+   "nombre": "Municipalidad Provincial de Ascope - MPAscope",
+   "antes": 39.6,
+   "ahora": 45.2,
+   "cambio": 5.6,
+   "sistemas_nuevos": [
+    "mesadepartesmpa.muniascope.gob.pe"
+   ]
+  },
+  {
+   "slug": "municorrales",
+   "nombre": "Municipalidad Distrital de Corrales - MDC",
+   "antes": 46.6,
+   "ahora": 41,
+   "cambio": -5.6,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "muniyavari",
+   "nombre": "Municipalidad Distrital de Yavari - MDY",
+   "antes": 46.6,
+   "ahora": 41,
+   "cambio": -5.6,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munipicota",
+   "nombre": "Municipalidad Provincial de Picota - MPP",
+   "antes": 45.2,
+   "ahora": 39.6,
+   "cambio": -5.6,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munireque",
+   "nombre": "Municipalidad Distrital de Reque - MDR",
+   "antes": 39.6,
+   "ahora": 34,
+   "cambio": -5.6,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munitucume",
+   "nombre": "Municipalidad Distrital de Túcume - MDT",
+   "antes": 39.6,
+   "ahora": 34,
+   "cambio": -5.6,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munijunin",
+   "nombre": "Municipalidad Provincial de Junín - MPJ",
+   "antes": 39.6,
+   "ahora": 34,
+   "cambio": -5.6,
+   "sistemas_nuevos": []
+  },
+  {
+   "slug": "munilapunta",
+   "nombre": "Municipalidad Distrital de La Punta - MDLP",
+   "antes": 70.5,
+   "ahora": 69.1,
+   "cambio": -1.4,
+   "sistemas_nuevos": [
+    "pagosenlinea.munilapunta.gob.pe"
+   ]
+  }
+ ],
+ "resumen": {
+  "antes": 1871,
+  "ahora": 1898,
+  "altas": 33,
+  "bajas": 6,
+  "subieron": 57,
+  "bajaron": 59,
+  "sin_cambio": 1749
+ }
+}
